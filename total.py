@@ -10,7 +10,15 @@ def total_expenses(file_path: str) -> float:
     Returns:
         float: total expenses
     """
-    pass
+    f = open(file_path)
+    x = f.read()
+    jason_data = json.loads(x)
+    c = list(jason_data.values())
+    #print(len(c))
+    u = 0
+    for i in c:
+        u+=i
+    return u
 
 
 # test
